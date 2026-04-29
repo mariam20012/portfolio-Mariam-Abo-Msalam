@@ -1,0 +1,455 @@
+:root {
+  --bg-main: #ebf4dd;
+  --bg-soft: #ffffff;
+  --text-main: #1f2a2f;
+  --text-muted: #4e5d63;
+  --accent: #6ca55c;
+  --accent-strong: #4f8243;
+  --border: #d9e4d0;
+  --shadow: 0 10px 30px rgba(40, 60, 50, 0.12);
+}
+
+body.dark {
+  --bg-main: #3b4953;
+  --bg-soft: #2f3a43;
+  --text-main: #f2f5f7;
+  --text-muted: #c9d0d5;
+  --accent: #9ac68c;
+  --accent-strong: #b8ddb0;
+  --border: #4f5f69;
+  --shadow: 0 14px 32px rgba(3, 6, 8, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* حل مشكلة الأيقونات: نضمن أن أي عنصر يحمل كلاس Font Awesome يستخدم خطه الخاص وليس Poppins */
+.fa-solid, .fa-brands, .fa-regular, .fas, .fab {
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+  font-weight: 900; 
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.7;
+  transition: background 0.35s ease, color 0.35s ease;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: min(1100px, 90%);
+  margin-inline: auto;
+}
+
+.section {
+  padding: 5rem 0;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: color-mix(in srgb, var(--bg-main) 88%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 72px;
+  gap: 1rem;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.logo span {
+  color: var(--accent-strong);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.2rem;
+}
+
+.nav-links a {
+  padding: 0.45rem 0.7rem;
+  border-radius: 8px;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.nav-links a:hover {
+  background: var(--bg-soft);
+  color: var(--accent-strong);
+}
+
+.theme-toggle,
+.nav-toggle {
+  border: 1px solid var(--border);
+  background: var(--bg-soft);
+  color: var(--text-main);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: transform 0.2s ease;
+}
+
+.theme-toggle:hover,
+.nav-toggle:hover {
+  transform: translateY(-2px);
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.hero-grid,
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 2.2rem;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 4vw, 3.3rem);
+  line-height: 1.2;
+  margin: 0.35rem 0 0.75rem;
+}
+
+.intro {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.typing-line {
+  min-height: 2.2rem;
+  font-weight: 600;
+  color: var(--accent-strong);
+}
+
+.cursor {
+  display: inline-block;
+  animation: blink 0.8s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.hero-description {
+  color: var(--text-muted);
+  max-width: 56ch;
+  margin-bottom: 1.3rem;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.3rem;
+  border-radius: 10px;
+  font-weight: 600;
+  border: 1px solid transparent;
+  transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: var(--accent-strong);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background: var(--accent);
+}
+
+.btn-secondary {
+  border-color: var(--accent-strong);
+  color: var(--accent-strong);
+}
+
+.btn-secondary:hover {
+  background: var(--bg-soft);
+}
+
+.hero-image img,
+.about-image img {
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+}
+
+h2 {
+  font-size: clamp(1.7rem, 3vw, 2.2rem);
+  margin-bottom: 1.3rem;
+}
+
+.about-content p,
+.project-content p,
+.feedback-card p {
+  color: var(--text-muted);
+}
+
+.highlight {
+  font-weight: 600;
+  color: var(--accent-strong);
+}
+
+.education-card,
+.project-card,
+.feedback-card {
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+.education-card {
+  padding: 1.4rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.education-card p i {
+  color: var(--accent-strong);
+  margin-right: 0.5rem;
+}
+
+.edu-ar {
+  font-weight: 700;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+
+.project-card {
+  overflow: hidden;
+  transition: transform 0.25s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+}
+
+.project-content {
+  padding: 1.05rem;
+}
+
+.project-content h3 {
+  margin-bottom: 0.5rem;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.7rem;
+}
+
+.chips span {
+  font-size: 0.85rem;
+  background: color-mix(in srgb, var(--accent) 22%, var(--bg-soft));
+  color: var(--text-main);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.28rem 0.72rem;
+}
+
+.project-content a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: 0.65rem;
+  font-weight: 600;
+  color: var(--accent-strong);
+}
+
+.skills-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+
+.skills-layout h3 {
+  margin-bottom: 0.8rem;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.tag-list span {
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.55rem 0.8rem;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  transition: transform 0.25s ease;
+}
+
+.tag-list span:hover {
+  transform: translateY(-3px);
+}
+
+.tag-list i {
+  color: var(--accent-strong);
+}
+
+.feedback-scroll {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(250px, 1fr);
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 0.4rem;
+  scroll-snap-type: x mandatory;
+}
+
+.feedback-card {
+  padding: 1rem;
+  scroll-snap-align: center;
+}
+
+.stars {
+  color: #f5b100;
+  letter-spacing: 1px;
+}
+
+.contact-grid {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.contact-grid a {
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.8rem 1rem;
+  display: flex;
+  gap: 0.55rem;
+  align-items: center;
+  transition: transform 0.25s ease;
+}
+
+.contact-grid a:hover {
+  transform: translateX(4px);
+}
+
+.contact-grid i {
+  color: var(--accent-strong);
+}
+
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 1.15rem 0;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 900px) {
+  .hero-grid,
+  .about-grid,
+  .project-grid,
+  .skills-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .about-image {
+    order: -1;
+  }
+}
+
+@media (max-width: 760px) {
+  .nav-toggle {
+    display: grid;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background: var(--bg-soft);
+    border-bottom: 1px solid var(--border);
+    flex-direction: column;
+    padding: 0.8rem 5%;
+    transform: scaleY(0);
+    transform-origin: top;
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+  }
+
+  .nav-links.open {
+    transform: scaleY(1);
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .project-card img {
+    width: 100%;       /* تخلي الصورة تاخد عرض الكارت كله */
+    height: 250px;     /* ثبتي ارتفاع موحد لكل الصور (غيري الرقم حسب رغبتك) */
+    object-fit: cover; /* أهم سطر: بيخلي الصورة تملا المساحة من غير ما "تتمط" أو شكلها يبوظ */
+    display: block;
+}
+}

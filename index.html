@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mariam Abo Msalam Hamed | Portfolio</title>
+  <meta name="description" content="Personal portfolio website of Mariam Abo Msalam Hamed, Flutter Developer and UI/UX Designer.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="container navbar">
+      <a href="#home" class="logo">Mariam<span>.</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#feedback">Feedback</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero section reveal">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="intro">Hi, I'm</p>
+          <h1>Mariam Abo Msalam Hamed</h1>
+          <p class="typing-line">I'm: <span id="typedText"></span><span class="cursor">|</span></p>
+          <p class="hero-description">
+            Experienced Flutter developer | 1 year creating performance, scalable Android &amp; iOS
+          </p>
+          <div class="hero-buttons">
+            <a href="#" class="btn btn-primary">Download CV</a>
+            <a href="#projects" class="btn btn-secondary">View Projects</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="assets/portofolio2.jpeg" alt="Mariam portfolio placeholder image">
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about section reveal">
+      <div class="container about-grid">
+        <div class="about-image">
+          <img src="assets/portofolio2.jpeg" alt="About section placeholder image">
+        </div>
+        <div class="about-content">
+          <h2>About Me</h2>
+          <p>
+            I'm <span class="highlight">Mariam Abo Msalam Hamed</span>. Passionate about mobile app development using
+            <span class="highlight">Flutter</span>. I'm eager to
+            <span class="highlight">grow professionally</span>, collaborate with
+            <span class="highlight">like-minded developers</span>, and contribute to
+            <span class="highlight">impactful applications</span>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="education section reveal">
+      <div class="container">
+        <h2>Education</h2>
+        <article class="education-card">
+          <p><i class="fa-solid fa-graduation-cap"></i> Bachelor's degree in Systems and Computers</p>
+          <p><i class="fa-solid fa-building-columns"></i> Faculty of Engineering, Al-Azhar University</p>
+          <p><i class="fa-solid fa-laptop-code"></i> Field: Systems and Computers</p>
+          <p><i class="fa-solid fa-award"></i> Grade: Good</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="projects section reveal">
+      <div class="container">
+        <h2>Projects</h2>
+        <div class="project-grid">
+          <article class="project-card">
+            <img src="assets/todoPortfolio.jpeg" style="width: 100%; height: 250px; object-fit: cover;" alt="Todo app">
+            <div class="project-content">
+              <h3>Todo App</h3>
+              <p class="chips">
+                <span>Flutter</span>
+                <span>REST API</span>
+              </p>
+              <p>Developed a Todo app to organize daily tasks using UI/UX and API.</p>
+             <a href="https://github.com/mariam20012/todo_app" target="_blank" rel="noopener noreferrer">
+  GitHub Link <i class="fa-solid fa-arrow-up-right-from-square"></i>
+</a>
+            </div>
+          </article>
+          <article class="project-card">
+            <img src="assets/newsPortfolio.webp" style="width: 100%; height: 250px; object-fit: cover;" alt="News app">
+            <div class="project-content">
+              <h3>News App</h3>
+              <p class="chips">
+                <span>Flutter</span>
+                <span>REST API</span>
+              </p>
+              <p>Developed a news app to explore news and weather using Google Maps.</p>
+             <a href="https://github.com/mariam20012/News-App" target="_blank" rel="noopener noreferrer">
+  GitHub Link <i class="fa-solid fa-arrow-up-right-from-square"></i>
+</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="skills section reveal">
+      <div class="container">
+        <h2>Skills &amp; Tools</h2>
+        <div class="skills-layout">
+          <div>
+            <h3>Skills</h3>
+            <div class="tag-list">
+              <span><i class="fa-solid fa-code"></i> Dart</span>
+              <span><i class="fa-solid fa-mobile-screen-button"></i> Flutter</span>
+              <span><i class="fa-solid fa-plug"></i> API</span>
+              <span><i class="fa-solid fa-palette"></i> UI/UX</span>
+              <span><i class="fa-solid fa-fire"></i> Firebase</span>
+            </div>
+          </div>
+          <div>
+            <h3>Tools</h3>
+            <div class="tag-list">
+              <span><i class="fa-brands fa-figma"></i> Figma</span>
+              <span><i class="fa-solid fa-mobile-screen-button"></i> Android Studio</span>
+              <span><i class="fa-solid fa-vial"></i> Postman</span>
+              <span><i class="fa-solid fa-laptop-code"></i> Visual Studio</span>
+              <span><i class="fa-brands fa-github"></i> GitHub</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="feedback" class="feedback section reveal">
+      <div class="container">
+        <h2>Feedback</h2>
+        <div class="feedback-scroll">
+          <article class="feedback-card">
+            <h3>Amani Embabi</h3>
+            <p class="stars">★★★★★</p>
+            <p>"Thank you for delivering the app exactly as requested."</p>
+          </article>
+          <article class="feedback-card">
+            <h3>Heba Halim</h3>
+            <p class="stars">★★★★★</p>
+            <p>"Great commitment to deadlines and quality."</p>
+          </article>
+          <article class="feedback-card">
+            <h3>Aya Ahmed</h3>
+            <p class="stars">★★★★★</p>
+            <p>"Best developer to work with."</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact section reveal">
+      <div class="container">
+        <h2>Contact</h2>
+        <div class="contact-grid">
+          <a href="https://wa.me/201017564401" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> WhatsApp: 01017564401</a>
+          <a href="mailto:mariamabumuslim@gmail.com"><i class="fa-solid fa-envelope"></i> mariamabumuslim@gmail.com</a>
+          <a href="https://www.linkedin.com/in/mariam-abu-muslim-53765b375" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i> LinkedIn Profile</a>
+          <a href="https://github.com/mariam20012" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> GitHub Profile</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Mariam Abo Msalam Hamed</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
